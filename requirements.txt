@@ -16,3 +16,4 @@ palettable
 plotly
 joblib
 scikit-learn
+specklepy

@@ -10,7 +10,7 @@ import os
 import joblib
 import streamlit as st
 import leafmap.kepler as leafmap
-st.set_page_config(page_title='Flood Hazard MAP BY ML',layout='wide')
+st.set_page_config(page_title='Flood Hazard MAP BY ML',layout='centered')
 
 uploaded_file = st.file_uploader("Upload .csv, .xlsx files not exceeding 100 MB")
 

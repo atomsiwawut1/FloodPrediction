@@ -52,7 +52,9 @@ if uploaded_file is not None:
                 #12.886686,100.8527195
 
                 m = leafmap.Map(center=[12.920912, 100.900474], zoom=11, widescreen=True)        
-                config=(r"./GIS_DATA\mlconfig.json")
+                #config=(r"./GIS_DATA\mlconfig.json")
+                configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/mlconfig.json"        
+                config=configurl  
                 m.add_df(df,layer_name="hex_data",config=config) 
                 m.to_streamlit()
                 for i, x in df.iterrows():
@@ -112,7 +114,9 @@ if uploaded_file is not None:
                 import leafmap.kepler as leafmap
                 #12.886686,100.8527195
                 m = leafmap.Map(center=[12.920912, 100.900474], zoom=11, widescreen=True)        
-                config=(r"./GIS_DATA\mlconfig.json")
+                #config=(r"./GIS_DATA\mlconfig.json")
+                configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/mlconfig.json"        
+                config=configurl  
                 m.add_df(df,layer_name="hex_data",config=config) 
                 m.to_streamlit()
                 for i, x in df.iterrows():

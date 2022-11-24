@@ -34,7 +34,9 @@ with empty1:
         st.empty()
 with content1:
         #st.write("here is the first column of content.")
-        content1.image(".\Media\Atom.png",caption="Siwawut pattanasri",width=300)
+        imageurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/Media/Atom.png"
+        #content1.image(".\Media\Atom.png",caption="Siwawut pattanasri",width=300)
+        content1.image(imageurl,caption="Siwawut pattanasri",width=300)
 
 
         st.markdown("""
@@ -134,7 +136,9 @@ empty1,content1,empty2,content2,empty3=st.columns([0.3,1.5,0.3,2,0.3])
 with empty1:
         st.empty()
 with content1:
-        st.image(".\Media\City.png",caption="https://www.facebook.com/siwawut.pattanasri/",width=600)
+        imageurl2 = "https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/Media/City.png"
+        #st.image(".\Media\City.png",caption="https://www.facebook.com/siwawut.pattanasri/",width=600)
+        st.image(imageurl2,caption="https://www.facebook.com/siwawut.pattanasri/",width=600)
 with empty2:
         st.empty()
 with content2:

@@ -10,6 +10,10 @@ import os
 import joblib
 import streamlit as st
 import leafmap.kepler as leafmap
+from io import BytesIO
+import pickle
+import requests
+
 st.set_page_config(page_title='Flood Hazard MAP BY ML',layout='centered')
 
 uploaded_file = st.file_uploader("Upload .csv, .xlsx files not exceeding 100 MB")
@@ -27,6 +31,9 @@ def validate_file(file):
     else:
         return False
 
+def load_model(model_file):
+    loaded_model = joblib.load(open(os.path.join(model_file),"rb"))
+    return loaded_model
 
 
 if uploaded_file is not None:
@@ -66,7 +73,13 @@ if uploaded_file is not None:
                 df.dropna(inplace=True)
                 X=df[feature_col]
                 y=df.Risk_Score 
-                loadmodel = joblib.load("./GIS_DATA\Flood Hazard Map.joblib")
+                #loadmodel = joblib.load("./GIS_DATA\Flood Hazard Map.joblib")
+                loadmodel = joblib.load("GIS_DATA\Flood Hazard Map.joblib")
+                #MLmodel="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib"
+                #loadmodel = joblib.load(MLmodel)
+                
+
+
                 predictEX= loadmodel.predict(X)
                 my_array=predictEX
                 
@@ -75,8 +88,10 @@ if uploaded_file is not None:
                 df['Predicted Score'] =df1['Predicted Score']
                 df['Predicted Score']=df['Predicted Score'].round(decimals = 0)
                 st.dataframe(df)
-                ml = leafmap.Map(center=[12.920912, 100.900474], zoom=11, widescreen=True)        
-                config=(r"C:\Users\Admin\Desktop\Streamlit\00_AtomApps\GIS_DATA\mlconfig.json")
+                ml = leafmap.Map(center=[12.920912, 100.900474], zoom=11, widescreen=True)
+                configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/mlconfig.json"        
+                config=configurl
+                #config=(r"C:\Users\Admin\Desktop\Streamlit\00_AtomApps\GIS_DATA\mlconfig.json")
                 ml.add_df(df,layer_name="hex_data",config=config)
                 st.header("Pattaya_H3_ML_Map") 
                 ml.to_streamlit()
@@ -119,7 +134,13 @@ if uploaded_file is not None:
                 X=df[feature_col]
                 y=df.Risk_Score 
                 #loadmodel = joblib.load(r"C:\Users\Admin\Desktop\Streamlit\00_AtomApps\GIS_DATA\Flood Hazard Map.joblib")
-                loadmodel = joblib.load("./GIS_DATA\Flood Hazard Map.joblib")
+                #loadmodel = joblib.load("./GIS_DATA\Flood Hazard Map.joblib")
+                loadmodel = joblib.load("GIS_DATA\Flood Hazard Map.joblib")
+                #MLmodel="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib"
+                #loadmodel = joblib.load(MLmodel)
+                
+        
+
                 predictEX= loadmodel.predict(X)
                 my_array=predictEX
                 df1 = pd.DataFrame(my_array, columns = ['Predicted Score'])
@@ -127,13 +148,17 @@ if uploaded_file is not None:
                 df['Predicted Score']=df['Predicted Score'].round(decimals = 0)
                 st.dataframe(df)
 
-                ml = leafmap.Map(center=[12.920912, 100.900474], zoom=11, widescreen=True)        
-                config=(r"./GIS_DATA\mlconfig.json")
+                ml = leafmap.Map(center=[12.920912, 100.900474], zoom=11, widescreen=True)
+                configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/mlconfig.json"        
+                config=configurl        
+                #config=(r"./GIS_DATA\mlconfig.json")
                 ml.add_df(df,layer_name="hex_data",config=config) 
                 ml.to_streamlit()
 
 
                 
+#The link needs to be the "raw" version (put raw.githubusercontent instead of github.com) and remove the "/blob/" portion of it.
 
+#https://github.com/atomsiwawut1/FloodPrediction/blob/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib
 
-
+#https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib

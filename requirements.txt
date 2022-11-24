@@ -17,3 +17,4 @@ plotly
 joblib
 scikit-learn
 specklepy
+plotly-express

@@ -36,7 +36,8 @@ with content1:
         #st.write("here is the first column of content.")
         imageurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/Media/Atom.png"
         #content1.image(".\Media\Atom.png",caption="Siwawut pattanasri",width=300)
-        content1.image(imageurl,caption="Siwawut pattanasri",width=300)
+        #content1.image(imageurl,caption="Siwawut pattanasri",width=300)
+        content1.image(imageurl,caption="Siwawut pattanasri",use_column_width=True)
 
 
         st.markdown("""
@@ -138,7 +139,9 @@ with empty1:
 with content1:
         imageurl2 = "https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/Media/City.png"
         #st.image(".\Media\City.png",caption="https://www.facebook.com/siwawut.pattanasri/",width=600)
-        st.image(imageurl2,caption="https://www.facebook.com/siwawut.pattanasri/",width=600)
+        #st.image(imageurl2,caption="https://www.facebook.com/siwawut.pattanasri/",width=600)
+        st.image(imageurl2,caption="https://www.facebook.com/siwawut.pattanasri/",use_column_width=True)
+        #st.image('hackershrine.jpg',use_column_width=True)
 with empty2:
         st.empty()
 with content2:

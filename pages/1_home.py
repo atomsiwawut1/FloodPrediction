@@ -16,8 +16,8 @@ image_url="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/M
 st.image(image_url,caption="best survival game",width=500)
 
 st.header('ปรับปรุงริมน้ำตลาดท่านา')
-st.image("\Media\TANA.png",caption="ปรับปรุงริมน้ำตลาดท่านา",width=500)
+st.image("/Media\TANA.png",caption="ปรับปรุงริมน้ำตลาดท่านา",width=500)
 
 
 st.header('ปรับปรุงริมน้ำตลาดท่านา')
-st.image("\Media\TANA2.png",caption="ปรับปรุงริมน้ำตลาดท่านา",width=500)
+st.image("/Media\TANA2.png",caption="ปรับปรุงริมน้ำตลาดท่านา",width=500)

@@ -13,6 +13,9 @@ import leafmap.kepler as leafmap
 from io import BytesIO
 import pickle
 import requests
+from io import BytesIO
+import pickle
+import requests
 
 st.set_page_config(page_title='Flood Hazard MAP BY ML',layout='centered')
 
@@ -140,6 +143,7 @@ if uploaded_file is not None:
                 #loadmodel = joblib.load(r"C:\Users\Admin\Desktop\Streamlit\00_AtomApps\GIS_DATA\Flood Hazard Map.joblib")
                 #loadmodel = joblib.load("./GIS_DATA\Flood Hazard Map.joblib")
                 loadmodel = joblib.load("GIS_DATA\Flood Hazard Map.joblib")
+
                 #MLmodel="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib"
                 #loadmodel = joblib.load(MLmodel)
                 
@@ -160,9 +164,16 @@ if uploaded_file is not None:
                 ml.to_streamlit()
 
 
+
+                mLink = 'https://github.com/aaronwangy/Kankoku/blob/master/filteredAnimeList45PercentAll.pkl?raw=true'
+                mfile = BytesIO(requests.get(mLink).content)
+                model_multipleRe = pickle.load(mfile)
+
                 
 #The link needs to be the "raw" version (put raw.githubusercontent instead of github.com) and remove the "/blob/" portion of it.
 
 #https://github.com/atomsiwawut1/FloodPrediction/blob/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib
 
 #https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib
+
+#Using the BytesIO you create a file object out of the response that you get from GitHub. That object can then be using in pickle.load. Note that I have added ?raw=true to the URL of the request.

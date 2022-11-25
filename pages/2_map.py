@@ -99,7 +99,7 @@ with tab6:
    configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/mlconfig.json"        
    config=configurl        
    #config=(r"./GIS_DATA\mlconfig.json")
-   m.add_df(in_csv,layer_name="hex_data",config=config) 
+   m.add_csv(in_csv,layer_name="hex_data",config=config) 
    m.to_streamlit()
 
   

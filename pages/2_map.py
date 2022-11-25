@@ -94,11 +94,15 @@ with tab6:
    import leafmap.kepler as leafmap
 #12.886686,100.8527195
    m = leafmap.Map(center=[12.920912, 100.900474], zoom=11, widescreen=True)
-   in_csv=(r"GIS_DATA\CSV_H3_Edit.csv")
-   config=(r"GIS_DATA\MapConfig1.json")
-   m.add_csv(in_csv,layer_name="hex_data",config=config)
-  
+   #in_csv=(r"GIS_DATA\CSV_H3_Edit.csv")
+   in_csv="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/5e0114776b5883bccf428a9e54de502754a649ba/GIS_DATA/CSV_H3_ML.csv"
+   configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/mlconfig.json"        
+   config=configurl        
+   #config=(r"./GIS_DATA\mlconfig.json")
+   m.add_df(in_csv,layer_name="hex_data",config=config) 
    m.to_streamlit()
+
+  
 
 
 

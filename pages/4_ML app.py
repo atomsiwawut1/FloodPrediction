@@ -79,7 +79,11 @@ if uploaded_file is not None:
                 X=df[feature_col]
                 y=df.Risk_Score 
                 #loadmodel = joblib.load("./GIS_DATA\Flood Hazard Map.joblib")
-                loadmodel = joblib.load("GIS_DATA\Flood Hazard Map.joblib")
+                #loadmodel = joblib.load("GIS_DATA\Flood Hazard Map.joblib")
+                mLink = 'https://github.com/atomsiwawut1/FloodPrediction/blob/main/GIS_DATA/FloodModel.pkl?raw=true'
+                mfile = BytesIO(requests.get(mLink).content)
+                loadmodel=joblib.load(mfile)
+
                 #MLmodel="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib"
                 #loadmodel = joblib.load(MLmodel)
                 
@@ -140,15 +144,11 @@ if uploaded_file is not None:
                 feature_col=['Elevation','TotalRainfall','Slope','LengthFromRiver','LU_Score']
                 X=df[feature_col]
                 y=df.Risk_Score 
-                #loadmodel = joblib.load(r"C:\Users\Admin\Desktop\Streamlit\00_AtomApps\GIS_DATA\Flood Hazard Map.joblib")
                 #loadmodel = joblib.load("./GIS_DATA\Flood Hazard Map.joblib")
-                loadmodel = joblib.load("GIS_DATA\Flood Hazard Map.joblib")
-
-                #MLmodel="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib"
-                #loadmodel = joblib.load(MLmodel)
-                
-        
-
+                #loadmodel = joblib.load("GIS_DATA\Flood Hazard Map.joblib")
+                mLink = 'https://github.com/atomsiwawut1/FloodPrediction/blob/main/GIS_DATA/FloodModel.pkl?raw=true'
+                mfile = BytesIO(requests.get(mLink).content)
+                loadmodel=joblib.load(mfile)
                 predictEX= loadmodel.predict(X)
                 my_array=predictEX
                 df1 = pd.DataFrame(my_array, columns = ['Predicted Score'])
@@ -163,13 +163,7 @@ if uploaded_file is not None:
                 ml.add_df(df,layer_name="hex_data",config=config) 
                 ml.to_streamlit()
 
-
-
-                mLink = 'https://github.com/aaronwangy/Kankoku/blob/master/filteredAnimeList45PercentAll.pkl?raw=true'
-                mfile = BytesIO(requests.get(mLink).content)
-                model_multipleRe = pickle.load(mfile)
-
-                
+              
 #The link needs to be the "raw" version (put raw.githubusercontent instead of github.com) and remove the "/blob/" portion of it.
 
 #https://github.com/atomsiwawut1/FloodPrediction/blob/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib

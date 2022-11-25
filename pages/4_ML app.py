@@ -107,8 +107,6 @@ if uploaded_file is not None:
 
 
 
-
-
             else:
                 xl_file = pd.ExcelFile(uploaded_file)
                 sheet_tuple = tuple(xl_file.sheet_names)
@@ -163,6 +161,7 @@ if uploaded_file is not None:
                 ml.add_df(df,layer_name="hex_data",config=config) 
                 ml.to_streamlit()
 
+
               
 #The link needs to be the "raw" version (put raw.githubusercontent instead of github.com) and remove the "/blob/" portion of it.
 
@@ -171,3 +170,9 @@ if uploaded_file is not None:
 #https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/453a18c6d71b18d9b0dd55c62a8a95a489aeb557/GIS_DATA/Flood%20Hazard%20Map.joblib
 
 #Using the BytesIO you create a file object out of the response that you get from GitHub. That object can then be using in pickle.load. Note that I have added ?raw=true to the URL of the request.
+
+
+
+
+
+

@@ -13,8 +13,12 @@ def run_map_app():
    st.subheader("Static Map")
 
 #layout ("centered" or "wide")
-st.set_page_config(page_title='Map',page_icon="🧊",layout='centered')
+st.set_page_config(page_title='Map',page_icon=":world_map:",layout='centered')
 # sharing Variable amoung pages
+
+css_file="styles/main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 
 st.subheader("Map")

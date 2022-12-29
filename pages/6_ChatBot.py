@@ -17,7 +17,12 @@ def generate_respone(prompt):
     )
     message=completions.choices[0].text
     return message
+st.set_page_config(page_title='ChatBot',page_icon=":robot_face:",layout='wide')
 
+css_file="styles/main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    
 st.title("Chatbot: GPT")
 
 #sorting chat

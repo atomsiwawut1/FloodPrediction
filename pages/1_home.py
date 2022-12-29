@@ -7,7 +7,7 @@ import leafmap.foliumap as leafmap
 import geopandas
 from geopandas import read_file
 
-st.set_page_config(page_title='Home',page_icon="🧊",layout='centered')
+st.set_page_config(page_title='Home',page_icon=":derelict_house_building:",layout='centered')
 
 
 

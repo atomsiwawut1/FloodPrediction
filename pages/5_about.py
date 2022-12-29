@@ -2,14 +2,16 @@ import streamlit as st
 import pandas as pd 
 import sys
 import os
-st.set_page_config(page_title='About me',layout='wide')
+st.set_page_config(page_title='About me',page_icon=":atom_symbol:",layout='wide')
 about_variable = "from Main About.py Page"
 
 
 #st.header('My CV', anchor=None)
 #st.subheader("Siwawut Pattanasri")
 
-
+css_file="styles/main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 st.markdown("""
 
@@ -23,10 +25,6 @@ st.markdown("""
 --- 
 
 """)
-
-
-
-
 
 
 empty1,content1,empty2,content2,empty3=st.columns([0.3,1.5,0.3,2,0.3])

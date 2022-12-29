@@ -18,7 +18,9 @@ st.set_page_config(
     page_icon="📊"
 )
 #--------------------------
-
+css_file="styles/main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 #--------------------------
 #CONTAINERS
 header = st.container()
@@ -52,10 +54,9 @@ with input:
      #-------
 	#User Input boxes
     speckleServer = serverCol.text_input("Server URL", "speckle.xyz", help="Speckle server to connect.")
-    ####speckleToken = tokenCol.text_input("Speckle token", "4e07d25a6257791746fdc199d523f91f1c60ddbdbc", help="If you don't know how to get your token, take a look at this [link](<https://speckle.guide/dev/tokens.html>)👈")
-    speckleToken ="4e07d25a6257791746fdc199d523f91f1c60ddbdbc"
-    #-------
-    #-------
+ 
+    speckleToken=st.secrets["speckleToken"]
+
     #CLIENT
     client = SpeckleClient(host=speckleServer)
     #Get account from Token

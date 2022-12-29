@@ -154,7 +154,7 @@ with content2:
 
 lineID : atomsiwawut
 
-:e-mail:atomsiwawut@gmail.com
+:e-mail: atomsiwawut@gmail.com
 
 :telephone_receiver: 0828952663
 

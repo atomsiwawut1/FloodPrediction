@@ -10,6 +10,10 @@ html_temp = """
 		</div>
 		"""
 
+css_file="styles/main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+
 def main():
     	# st.title("ML Web App with Streamlit")
 	stc.html(html_temp)

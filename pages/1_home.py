@@ -9,7 +9,9 @@ from geopandas import read_file
 
 st.set_page_config(page_title='Home',page_icon=":derelict_house_building:",layout='centered')
 
-
+css_file="styles/main.css"
+with open(css_file) as f:
+    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 #st.header('My Hobby')
 #image_url="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/Media/hunt.jpg"

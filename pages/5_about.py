@@ -40,29 +40,26 @@ with content1:
 
         st.markdown("""
 ### Qualifications and Professional Memberships
-- Bachelor of Civil Engineering, Faculty of Engineering Thammasat University, Bangkok, Thailand
+- ◉ Bachelor of Civil Engineering, Faculty of Engineering Thammasat University, Bangkok, Thailand
 
-- License for Professional Practice Civil Engineer, Engineering Council of Thailand, Associate Engineer ID.272693
+- ◉ License for Professional Practice Civil Engineer, Engineering Council of Thailand, Associate Engineer ID.272693
 
-- Drone license (Thailand)
+- ◉ Drone license (Thailand)
 
-- Training certificate
-    - ArchiStar Academy
-        - Dynamo Advanced
-        - Dynamo Designer
-        - Dynamo Essentials
-        - SketchUp Essentials
-        - Advanced VR in Unreal Engine 4
+- ◉ Training certificate
+    - ◎ ArchiStar Academy
+        - ▹Dynamo Advanced
+        - ▹Dynamo Designer
+        - ▹Dynamo Essentials
+        - ▹SketchUp Essentials
+        - ▹Advanced VR in Unreal Engine 4
 
-    - Linkedin learning
-        - Dynamo for Revit Python Scripting
-        - BIM 360 Design Essential Training
-     
-     - Google Analytics Academy
-        - Data Studio
+    - ◎ Linkedin learning
+        - ▹Dynamo for Revit Python Scripting
+        - ▹BIM 360 Design Essential Training
 
-
-
+    - ◎ Google Analytics Academy
+        - ▹Data Studio
 
 
 
@@ -74,25 +71,25 @@ with empty2:
 with content2:
         ##st.write("here is the second column of content.")
         st.markdown("""
-Siwawut has experiences in analysis and design structure of building with CSI software; 3D modelling with BIM software (SketchUp Revit Tekla Structures) management and planning of construction projects with Primavera P6 & Microsoft Project Data Visualization with Power BI and Data analysis with R & Python programming.
+        
+➞      Siwawut has experiences in analysis and design structure of building with CSI software; 3D modelling with BIM software (SketchUp Revit Tekla Structures) management and planning of construction projects with Primavera P6 & Microsoft Project Data Visualization with Power BI and Data analysis with R & Python programming.
 
 --- 
-
 ### EXPERTISE AND SKILLS
-- Consulting about using BIM in project (i.e. BIM Model Development, Quantity Takeoff, Scheduling, Clash detection and Facility Management)
-- Technical support for teams (Model management by Dynamo , Navisworks , ETC)
-- 3D modeling with BIM software (Revit, Sketch up, Tekla structure, Rhino)
-- 3D Visualization : D5 Render , Enscape
-- Data analysis : R programing ,Python ,Excel ,Power BI ,Azure
-- Research and stay informed on BIM related software and technologies.
-- Drone flying skills : Drone Deploy ,Pix4d
+- ◉ Consulting about using BIM in project (i.e. BIM Model Development, Quantity Takeoff, Scheduling, Clash detection and Facility Management)
+- ◉ Technical support for teams (Model management by Dynamo , Navisworks , ETC)
+- ◉ 3D modeling with BIM software (Revit, Sketch up, Tekla structure, Rhino)
+- ◉ 3D Visualization : D5 Render , Enscape
+- ◉ Data analysis : R programing ,Python ,Excel ,Power BI ,Azure
+- ◉ Research and stay informed on BIM related software and technologies.
+- ◉ Drone flying skills : Drone Deploy ,Pix4d
 
 ---
 
 ### Management skills
-- Information & Data Management : Monitor, manage and reviews project information and data.
-- Scope & Change Control : Defines requirements and scope as key element of any project.
-- Project Leadership : Focuses on strategy, manage details to align team and client towards project success.
+- ◉ Information & Data Management : Monitor, manage and reviews project information and data.
+- ◉ Scope & Change Control : Defines requirements and scope as key element of any project.
+- ◉ Project Leadership : Focuses on strategy, manage details to align team and client towards project success.
 
 
 ### Relevant Experience

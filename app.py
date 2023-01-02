@@ -4,7 +4,7 @@ import streamlit.components.v1 as stc
 
 
 html_temp = """
-		<div style="background-color:#3872fb;padding:10px;border-radius:10px">
+		<div style="background-color:#afcc88;padding:10px;border-radius:10px">
 		<h1 style="color:white;text-align:center;">Flood Risk Predictor App</h1>
 		<h2 style="color:white;text-align:center;">Pattaya City </h2>
 		</div>

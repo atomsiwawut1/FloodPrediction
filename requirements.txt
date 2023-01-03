@@ -21,3 +21,4 @@ plotly-express
 openai
 streamlit-chat
 requests
+streamlit-elements

@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd 
 import sys
 import os
+from streamlit_elements import elements, dashboard, mui
 st.set_page_config(page_title='About me',page_icon=":atom_symbol:",layout='wide')
 about_variable = "from Main About.py Page"
+from streamlit_elements import media
 
 
 #st.header('My CV', anchor=None)
@@ -93,19 +95,23 @@ with content2:
 
 
 ### Relevant Experience
-Whizdom101 Bangkok, Mixed-use Building; Project Commercial Phase II  (Feb 2019 – 2022), Magnolia Quality Development Corporation Limited | BIM Consultant
+- ◉ Whizdom101 Bangkok, Mixed-use Building; Project Commercial Phase II  (Feb 2019 – 2022), Magnolia Quality Development Corporation Limited | BIM Consultant
 
-Terra, Data Center; Project Terra (Feb 2019 – 2021), ST Telemedia Limited | BIM Consultant
+- ◉ Terra, Data Center; Project Terra (Feb 2019 – 2021), ST Telemedia Limited | BIM Consultant
 
-BIM Sansiri Corporate Service – Phase 1 | Bangkok | Sansiri Development High rise & Low Rise | 2019 – 2020 | BIM Corporate Consult
+- ◉ Sansiri BIM Corporate Service | Bangkok | Sansiri Development High rise & Low Rise | 2019 – 2020 | BIM Corporate Consult
 
-Dusit Central Park | Bangkok | Joint Venture of Dusit Thani with Central Pattana | 2019 - 2023 | BIM Management
+- ◉ Dusit Central Park | Bangkok | Joint Venture of Dusit Thani with Central Pattana | 2019 - 2023 | BIM Management
 
-Bangkok Cybertech District | Bangkok | Magnolia Quality Development Corporation Limited (MQDC) | 2020 - 2023 |BIM consultant
+- ◉ DTGO BIM Corporate Service | Bangkok | 2020 – 2021 | BIM Corporate Consult
 
-PATTAYA WORLDMARK | Chonburi | Magnolia Quality Development Corporation Limited (MQDC) | 2020 - 2025 | BIM Management
+- ◉ Bangkok Cybertech District | Bangkok | Magnolia Quality Development Corporation Limited (MQDC) | 2020 - 2023 |BIM consultant
 
-Pattaya Smart City Platform,Chonburi| EEC Phase 1  | 2021 - 2025 |Urban Development
+- ◉ PATTAYA WORLDMARK | Chonburi | Magnolia Quality Development Corporation Limited (MQDC) | 2020 - 2025 | BIM Management
+
+- ◉ Pattaya Smart City Platform,Chonburi| EEC Phase 1  | 2021 - 2025 |Urban Development
+
+- ◉ AP BIM Corporate Service | Bangkok | 2021 – 2022 | BIM Corporate Consult
 
 
 

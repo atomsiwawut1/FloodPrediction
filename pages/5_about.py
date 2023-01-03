@@ -2,10 +2,8 @@ import streamlit as st
 import pandas as pd 
 import sys
 import os
-from streamlit_elements import elements, dashboard, mui
 st.set_page_config(page_title='About me',page_icon=":atom_symbol:",layout='wide')
 about_variable = "from Main About.py Page"
-from streamlit_elements import media
 
 
 #st.header('My CV', anchor=None)

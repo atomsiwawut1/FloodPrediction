@@ -17,7 +17,7 @@ from io import BytesIO
 import pickle
 import requests
 
-st.set_page_config(page_title='Flood Hazard MAP BY ML',layout='centered')
+st.set_page_config(page_title='Flood Risk MAP BY ML',page_icon=":robot_face:",layout='centered')
 css_file="styles/main.css"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)

@@ -61,8 +61,11 @@ with content1:
     - ◎ Google Analytics Academy
         - ▹Data Studio
 
+    - ◎ Maven Analytics
+        - ▹Microsoft Power BI - Up & Running With Power BI Desktop   
 
-
+    - ◎ Maven Analytics
+        - ▹Python for Data Science and Machine Learning Bootcamp
 
         """)
 
@@ -78,11 +81,7 @@ with content2:
 ### EXPERTISE AND SKILLS
 - ◉ Consulting about using BIM in project (i.e. BIM Model Development, Quantity Takeoff, Scheduling, Clash detection and Facility Management)
 - ◉ Technical support for teams (Model management by Dynamo , Navisworks , ETC)
-- ◉ 3D modeling with BIM software (Revit, Sketch up, Tekla structure, Rhino)
-- ◉ 3D Visualization : D5 Render , Enscape
-- ◉ Data analysis : R programing ,Python ,Excel ,Power BI ,Azure
 - ◉ Research and stay informed on BIM related software and technologies.
-- ◉ Drone flying skills : Drone Deploy ,Pix4d
 
 ---
 
@@ -91,6 +90,19 @@ with content2:
 - ◉ Scope & Change Control : Defines requirements and scope as key element of any project.
 - ◉ Project Leadership : Focuses on strategy, manage details to align team and client towards project success.
 
+---
+
+### Technical skills
+- ◉ Digital Modeling - Autodesk Revit, SketchUp, Tekla structure, Rhino 
+- ◉ 3D Visualization- D5 Render, Enscape, Unreal Engine 
+- ◉ BIM Model Coordination & Management – Autodesk Navisworks, BIM Track and BIM360
+- ◉ Computational Design - Dynamo, Grasshopper (Parametric modeling in structural design & Urban Design)
+- ◉ Data analyst skills – Python, Power BI (Dashboard, Decision Making Tools for Business)
+- ◉ Geospatial Analyst Skills - QGIS, Python Leafmap (Urban Analytics)
+- ◉ Machine learning Skills- PythonPackage TensorFlow and scikit-learn (Flood Prediction, Urban Energy Consumption)
+- ◉ Drone flying skills : Drone Deploy ,Pix4d (2D Mapping, 3D Mapping)
+
+---
 
 ### Relevant Experience
 - ◉ Whizdom101 Bangkok, Mixed-use Building; Project Commercial Phase II  (Feb 2019 – 2022), Magnolia Quality Development Corporation Limited | BIM Consultant

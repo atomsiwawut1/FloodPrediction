@@ -57,6 +57,7 @@ with content1:
     - ◎ Linkedin learning
         - ▹Dynamo for Revit Python Scripting
         - ▹BIM 360 Design Essential Training
+        - ▹Rhino 7 Essential Training
 
     - ◎ Google Analytics Academy
         - ▹Data Studio
@@ -119,9 +120,11 @@ with content2:
 
 - ◉ Pattaya Smart City Platform,Chonburi| EEC Phase 1  | 2021 - 2025 |Urban Development
 
-- ◉ New South Wales, Australian | 2020 - 2021 | BIM Asset Code management
+- ◉ New South Wales, Australian | 2021 - 2022 | BIM Asset Code management
 
 - ◉ AP BIM Corporate Service | Bangkok | 2021 – 2022 | BIM Corporate Consult
+
+- ◉ Next01, Data Center; Project Terra (Feb 2022 – 2023), ST Telemedia Limited | BIM Consultant
 
 
 

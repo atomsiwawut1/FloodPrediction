@@ -79,7 +79,7 @@ with content2:
 --- 
 ### EXPERTISE AND SKILLS
 - ◉ Consulting about using BIM in project (i.e. BIM Model Development, Quantity Takeoff, Scheduling, Clash detection and Facility Management)
-- ◉ Technical support for teams (Model management by Dynamo , Navisworks , ETC)
+- ◉ Technical support for teams (Automation Process, BIM Technical Issues, ETC)
 - ◉ Research and stay informed on BIM related software and technologies.
 
 ---

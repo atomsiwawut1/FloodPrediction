@@ -64,8 +64,6 @@ with content1:
     - ◎ Maven Analytics
         - ▹Microsoft Power BI - Up & Running With Power BI Desktop   
 
-    - ◎ Maven Analytics
-        - ▹Python for Data Science and Machine Learning Bootcamp
 
         """)
 
@@ -120,6 +118,8 @@ with content2:
 - ◉ PATTAYA WORLDMARK | Chonburi | Magnolia Quality Development Corporation Limited (MQDC) | 2020 - 2025 | BIM Management
 
 - ◉ Pattaya Smart City Platform,Chonburi| EEC Phase 1  | 2021 - 2025 |Urban Development
+
+- ◉ New South Wales, Australian | 2020 - 2021 | BIM Asset Code management
 
 - ◉ AP BIM Corporate Service | Bangkok | 2021 – 2022 | BIM Corporate Consult
 

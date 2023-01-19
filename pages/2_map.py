@@ -9,6 +9,7 @@ import leafmap.foliumap as leafmap
 import geopandas as gpd
 import xyzservices.providers as xyz
 
+
 def run_map_app():
    st.subheader("Static Map")
 
@@ -23,7 +24,7 @@ with open(css_file) as f:
 
 st.subheader("Map")
 
-tab1, tab2, tab3 ,tab4 ,tab5 ,tab6 = st.tabs(["2D Map", "3D Map", "Compare","CSV","SH","Test"])
+tab1, tab2, tab3 ,tab4 ,tab5 ,tab6 = st.tabs(["2D Map", "3D Map", "Compare","CSV","GeoDataFrame","H3"])
 
 with tab1:
    st.header("2D Map")
@@ -75,10 +76,9 @@ with tab3:
    m.to_streamlit()
 
 with tab4:
-   
-   import geopandas as gpd
+   st.header("Point")
    gdf = gpd.read_file("https://raw.githubusercontent.com/giswqs/leafmap/master/examples/data/world_cities.geojson")
-   m = leafmap.Map(center=[20, 0], zoom=1)
+   m = leafmap.Map(center=[12.920912, 100.900474], zoom=11, widescreen=True)
    m.add_gdf(gdf, "World cities")
    m.to_streamlit()
 
@@ -86,9 +86,11 @@ with tab4:
 
 
 with tab5:
-   m = leafmap.Map(center=[20, 0], zoom=1)
-   in_shp = "https://github.com/giswqs/leafmap/raw/master/examples/data/countries.zip"
-   m.add_shp(in_shp, "Countries")
+   st.header("GeoDataFrame")
+   import leafmap.kepler as leafmap
+   m = leafmap.Map(center=[12.920912, 100.900474], zoom=8, widescreen=True)
+   gdf = gpd.read_file(r"GIS_DATA\00_SHP\TAMBON_A.shp")
+   m.add_gdf(gdf, "Tambon")
    m.to_streamlit()
 
 

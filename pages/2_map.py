@@ -89,8 +89,11 @@ with tab5:
    st.header("GeoDataFrame")
    import leafmap.kepler as leafmap
    m = leafmap.Map(center=[12.920912, 100.900474], zoom=8, widescreen=True)
-   gdf = gpd.read_file(r"GIS_DATA\00_SHP\TAMBON_A.shp")
+   #gdf = gpd.read_file(r"GIS_DATA\00_SHP\TAMBON_A.shp")
+   gdf = gpd.read_file(r"https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/00_SHP/TAMBON.zip")
    m.add_gdf(gdf, "Tambon")
+   #in_shp ="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/00_SHP/TAMBON.zip"
+   #m.add_shp(in_shp, "Tambon")
    m.to_streamlit()
 
 

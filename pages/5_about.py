@@ -161,7 +161,7 @@ with empty2:
 with content2:
         st.markdown("""
 
-## contract
+## contact
 
 [Facebook](https://www.facebook.com/siwawut.pattanasri/)
 

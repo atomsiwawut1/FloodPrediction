@@ -64,7 +64,7 @@ if uploaded_file is not None:
                 m.add_df(df,layer_name="hex_data",config=config) 
                 m.to_streamlit()
                 for i, x in df.iterrows():
-                    if df.loc[i,'LUL1_CODE'] =='U':
+                    if df.loc[i,'LUL1_CODE'] =='W':
                          df.loc[i,'LU_Score'] = 4
                     elif df.loc[i,'LUL1_CODE']=='A':
                         df.loc[i,'LU_Score'] = 3

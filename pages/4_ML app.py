@@ -132,7 +132,7 @@ if uploaded_file is not None:
                          df.loc[i,'LU_Score'] = 4
                     elif df.loc[i,'LUL1_CODE']=='A':
                         df.loc[i,'LU_Score'] = 3
-                    elif df.loc[i,'LUL1_CODE'] =='U':
+                    elif df.loc[i,'LUL1_CODE'] =='W':
                         df.loc[i,'LU_Score'] = 2
                     elif df.loc[i,'LUL1_CODE'] =='M':
                         df.loc[i,'LU_Score'] = 2

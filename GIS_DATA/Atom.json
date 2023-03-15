@@ -134,7 +134,7 @@
             "enabled": true
           }
         },
-        "layerBlending": "normal",
+        "layerBlending": "additive",
         "splitMaps": [],
         "animationConfig": {
           "currentTime": null,

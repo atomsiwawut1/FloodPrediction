@@ -2,13 +2,12 @@
     "version": "v1",
     "config": {
       "visState": {
-        "filters": [],
         "layers": [
           {
             "type": "hexagonId",
             "config": {
               "dataId": "hex_data",
-              "label": "hex_id",
+              "label": "index",
               "color": [
                 255,
                 203,
@@ -21,22 +20,20 @@
                 255
               ],
               "columns": {
-                "hex_id": "hex_id"
+                "hex_id": "index"
               },
               "isVisible": true,
               "visConfig": {
                 "opacity": 0.8,
                 "colorRange": {
-                  "name": "ColorBrewer OrRd-6",
-                  "type": "sequential",
-                  "category": "ColorBrewer",
+                  "name": "Custom Palette",
+                  "type": "custom",
+                  "category": "Custom",
                   "colors": [
-                    "#fef0d9",
-                    "#fdd49e",
-                    "#fdbb84",
-                    "#fc8d59",
-                    "#e34a33",
-                    "#b30000"
+                    "#FFFFBF",
+                    "#FDAE61",
+                    "#D7191C",
+                    "#A6D96A"
                   ]
                 },
                 "coverage": 1,
@@ -73,10 +70,10 @@
             },
             "visualChannels": {
               "colorField": {
-                "name": "Total r",
-                "type": "integer"
+                "name": "Class_Tr2",
+                "type": "string"
               },
-              "colorScale": "quantile",
+              "colorScale": "ordinal",
               "sizeField": null,
               "sizeScale": "linear",
               "coverageField": null,
@@ -89,19 +86,15 @@
             "fieldsToShow": {
               "hex_data": [
                 {
-                  "name": "hex_id",
+                  "name": "index",
                   "format": null
                 },
                 {
-                  "name": "LU_CODE",
+                  "name": "LU_LV1",
                   "format": null
                 },
                 {
-                  "name": "LUL1_CODE",
-                  "format": null
-                },
-                {
-                  "name": "Elevation_",
+                  "name": "Elev",
                   "format": null
                 },
                 {
@@ -109,11 +102,19 @@
                   "format": null
                 },
                 {
-                  "name": "Total Rain",
+                  "name": "FAR",
                   "format": null
                 },
                 {
-                  "name": "Total r",
+                  "name": "BCR",
+                  "format": null
+                },
+                {
+                  "name": "Class_Tr2",
+                  "format": null
+                },
+                {
+                  "name": "PredictedFloodRisk",
                   "format": null
                 }
               ]
@@ -143,8 +144,8 @@
       "mapState": {
         "bearing": 0,
         "dragRotate": false,
-        "latitude": 100.916719,
-        "longitude": 100.86869255455714,
+        "latitude": 12.92,
+        "longitude": 100.916719,
         "pitch": 0,
         "zoom": 11,
         "isSplit": false

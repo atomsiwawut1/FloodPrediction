@@ -24,7 +24,7 @@ with open(css_file) as f:
 
 st.subheader("Map")
 
-tab1, tab2 ,tab3 = st.tabs(["GeoDataFrame","H3","Pattaya City"])
+tab1, tab2  = st.tabs(["GeoDataFrame","Pattaya City"])
 
 
 

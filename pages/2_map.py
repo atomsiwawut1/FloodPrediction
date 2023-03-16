@@ -61,23 +61,21 @@ with tab2:
 
   
 with tab3:
-   st.header("Pattaya_H3_Map_Predicted")
+   st.header("Pattaya_H3_Map")
    import streamlit as st
    import leafmap.kepler as leafmap
 #12.886686,100.8527195
    
    m = leafmap.Map(center=[12.92, 100.86869255455714], zoom=11, widescreen=False)
    #in_csv=(r"C:\Users\Admin\OneDrive - Thammasat University\01_Thesis\11_ML_Model\H3_Predict.csv")
-   #in_csv=(r"C:\Users\Admin\OneDrive - Thammasat University\01_Thesis\11_ML_Model\H3_Predict.csv")
-   in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_Predict.csv'
+   in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
    #m.add_csv(in_csv,layer_name="hex_data")
    #config=(r"./GIS_DATA\Atom.json")
-   #m.add_csv(in_csv,layer_name="hex_data",config=config) 
-   configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/Atom.json"
+   #m.add_csv(in_csv,layer_name="hex_data",config=config)
+   configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/mapconfig.json"
    config=configurl
-   m.add_csv(in_csv,layer_name="hex_data",config=config)
+   m.add_csv(in_csv,layer_name="hex_data",config=config) 
    m.to_streamlit()
-
 
 
 

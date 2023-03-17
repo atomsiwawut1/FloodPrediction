@@ -71,7 +71,7 @@ with content2:
     palette={"ไม่มีความเสี่ยง": "#A6D96A","เสี่ยงภัยปานกลาง": "#FDAE61","เสี่ยงภัยมาก": "#D7191C","เสี่ยงภัยน้อย": "#FFFFBF"}
     dff["name"]=[str(i) for i in count1.index]
     dff["number"] = count1.values
-    pie_fig=px.pie(dff, values="number", names="name",color=palette, hole=.6,title="PieChart")
+    pie_fig=px.pie(dff, values="number", names="name",color="name", color_discrete_map=palette, hole=.6,title="PieChart")
     pie_fig.update(layout_showlegend=False)
     st.plotly_chart(pie_fig, theme="streamlit", use_container_width=True)
 

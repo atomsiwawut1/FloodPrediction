@@ -23,12 +23,36 @@ with open(css_file) as f:
 
 
 st.header('Pattaya Flood Risk Dashboard')
+in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
+df = pd.read_csv(in_csv)
+# TOP KPI's
+#max_rainfall = int(df["Annual_Rain_2016"].max(),)
+max_rainfall = round(df["Annual_Rain_2016"].max(),2)
+average_rainfall = round(df["Annual_Rain_2016"].mean(), 2)
+min_rainfall= round(df["Annual_Rain_2016"].min(), 2)
 
-empty1,content1,empty2,content2,empty3=st.columns([0.2,7,0.1,6,0.2])
+left_column, middle_column, right_column = st.columns(3)
+with left_column:
+    #st.subheader("min_rainfall:")
+    #st.subheader(f"{max_rainfall} mm")
+    st.metric(label="Minimum rainfall", value=f"{min_rainfall} mm", delta=None)
+with middle_column:
+    #st.subheader("Average Rainfall:")
+    #st.subheader(f"{average_rainfall} mm")
+    st.metric(label="Average rainfall", value=f"{average_rainfall} mm", delta=None)
+with right_column:
+    #st.subheader("Max Rainfall:")
+    st.metric(label="Maximum rainfall", value=f"{max_rainfall} mm", delta=None)
+
+st.markdown("""---""")
+
+
+
+empty1,content1,empty2,content2,empty3=st.columns([0.1,7,0.1,6,0.1])
 with empty1:
         st.empty()
 with content1:
-    st.header("Pattaya_H3_Map")
+    st.subheader("Pattaya_H3_Map", anchor=None)
     import streamlit as st
     import leafmap.kepler as leafmap
 #12.886686,100.8527195
@@ -44,12 +68,12 @@ with content1:
     m.add_csv(in_csv,layer_name="hex_data",config=config) 
     m.to_streamlit()
 
-    st.video('https://www.youtube.com/watch?v=ySZ97GSVb50')
 
 
 with empty2:
         st.empty()
 with content2:
+    st.subheader("Data Visualization", anchor=None)
     in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
     df = pd.read_csv(in_csv)
 
@@ -74,12 +98,21 @@ with content2:
     pie_fig=px.pie(dff, values="number", names="name",color="name", color_discrete_map=palette, hole=.6,title="PieChart")
     pie_fig.update(layout_showlegend=False)
     st.plotly_chart(pie_fig, theme="streamlit", use_container_width=True)
+    #st.write(pie_fig)
 
 
+st.markdown("""---""")
+
+a_column, b_column, c_column = st.columns(3)
+with a_column:
+    st.video('https://www.youtube.com/watch?v=qwbLITj5fMo')
+with b_column:
+    st.video('https://www.youtube.com/watch?v=JHx57St8yDk')
+with c_column:
+    st.video('https://www.youtube.com/watch?v=H-W1eaZ0GGw')
 
 
-
-
+st.markdown("""---""")
 
 in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
 df = pd.read_csv(in_csv)

@@ -65,7 +65,7 @@ with content1:
     import streamlit as st
     import leafmap.kepler as leafmap
 #12.886686,100.8527195
-    m = leafmap.Map(center=[12.92, 100.86869255455714], zoom=11, widescreen=False)
+    m = leafmap.Map(center=[12.92, 100.86869255455714], height=600, zoom=11, widescreen=False)
     #in_csv=(r"C:\Users\Admin\OneDrive - Thammasat University\01_Thesis\11_ML_Model\H3_Predict.csv")
     #m.add_csv(in_csv,layer_name="hex_data")
     #config=(r"./GIS_DATA\Atom.json")

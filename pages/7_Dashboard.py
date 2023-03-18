@@ -20,12 +20,15 @@ css_file="styles/main.css"
 with open(css_file) as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
+# Read data
+in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
+df = pd.read_csv(in_csv)
+
 
 
 st.header('Pattaya Flood Risk Dashboard')
-in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
-df = pd.read_csv(in_csv)
-# TOP KPI's
+
+# Metric
 #max_rainfall = int(df["Annual_Rain_2016"].max(),)
 max_rainfall = round(df["Annual_Rain_2016"].max(),2)
 average_rainfall = round(df["Annual_Rain_2016"].mean(), 2)
@@ -53,19 +56,21 @@ with empty1:
         st.empty()
 with content1:
     st.subheader("Pattaya_H3_Map", anchor=None)
+    floodlist =df.FloodRisk.unique().tolist()
+    choices = st.multiselect(" ",floodlist)
+    #st.write(df[df.FloodRisk.isin(choices)])
+    df=df[df.FloodRisk.isin(choices)]
     import streamlit as st
     import leafmap.kepler as leafmap
 #12.886686,100.8527195
-   
     m = leafmap.Map(center=[12.92, 100.86869255455714], zoom=11, widescreen=False)
     #in_csv=(r"C:\Users\Admin\OneDrive - Thammasat University\01_Thesis\11_ML_Model\H3_Predict.csv")
-    in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
     #m.add_csv(in_csv,layer_name="hex_data")
     #config=(r"./GIS_DATA\Atom.json")
     #m.add_csv(in_csv,layer_name="hex_data",config=config)
     configurl="https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/mapconfig.json"
     config=configurl
-    m.add_csv(in_csv,layer_name="hex_data",config=config) 
+    m.add_df(df,layer_name="hex_data",config=config) 
     m.to_streamlit()
 
 
@@ -74,11 +79,6 @@ with empty2:
         st.empty()
 with content2:
     st.subheader("Data Visualization", anchor=None)
-    in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
-    df = pd.read_csv(in_csv)
-
-    
-  
     fig = px.histogram(data_frame=df,x='FloodRisk',color='FloodRisk', color_discrete_map={
                 "ไม่มีความเสี่ยง": "#A6D96A",
                 "เสี่ยงภัยปานกลาง": "#FDAE61",
@@ -114,6 +114,7 @@ with c_column:
 
 st.markdown("""---""")
 
-in_csv ='https://raw.githubusercontent.com/atomsiwawut1/FloodPrediction/main/GIS_DATA/H3_MAP_Dataset_DEM2m_2016.csv'
-df = pd.read_csv(in_csv)
+
 st.dataframe(df)
+
+

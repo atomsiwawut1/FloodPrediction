@@ -27,25 +27,24 @@ df = pd.read_csv(in_csv)
 
 
 st.header('Pattaya Flood Risk Dashboard')
-
+with st.container():
 # Metric
 #max_rainfall = int(df["Annual_Rain_2016"].max(),)
-max_rainfall = round(df["Annual_Rain_2016"].max(),2)
-average_rainfall = round(df["Annual_Rain_2016"].mean(), 2)
-min_rainfall= round(df["Annual_Rain_2016"].min(), 2)
-
-left_column, middle_column, right_column = st.columns(3)
-with left_column:
+    max_rainfall = round(df["Annual_Rain_2016"].max(),2)
+    average_rainfall = round(df["Annual_Rain_2016"].mean(), 2)
+    min_rainfall= round(df["Annual_Rain_2016"].min(), 2)
+    left_column, middle_column, right_column = st.columns(3)
+    with left_column:
     #st.subheader("min_rainfall:")
     #st.subheader(f"{max_rainfall} mm")
-    st.metric(label="Minimum rainfall", value=f"{min_rainfall} mm", delta=None)
-with middle_column:
+        st.metric(label="Minimum rainfall", value=f"{min_rainfall} mm", delta=None)
+    with middle_column:
     #st.subheader("Average Rainfall:")
     #st.subheader(f"{average_rainfall} mm")
-    st.metric(label="Average rainfall", value=f"{average_rainfall} mm", delta=None)
-with right_column:
+        st.metric(label="Average rainfall", value=f"{average_rainfall} mm", delta=None)
+    with right_column:
     #st.subheader("Max Rainfall:")
-    st.metric(label="Maximum rainfall", value=f"{max_rainfall} mm", delta=None)
+        st.metric(label="Maximum rainfall", value=f"{max_rainfall} mm", delta=None)
 
 st.markdown("""---""")
 
@@ -91,7 +90,7 @@ with content2:
              title="BarChart")
     fig.update(layout_showlegend=False)
     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
-
+    
 
     count1 = df["FloodRisk"].value_counts()
     dff = pd.DataFrame()
@@ -100,24 +99,27 @@ with content2:
     dff["number"] = count1.values
     pie_fig=px.pie(dff, values="number", names="name",color="name", color_discrete_map=palette, hole=.6,title="PieChart")
     pie_fig.update(layout_showlegend=False)
+    #pie_fig.update_layout({‘plot_bgcolor’: ‘rgba(0, 0, 0, 0)’,‘paper_bgcolor’: ‘rgba(0, 0, 0, 0)’,})
     st.plotly_chart(pie_fig, theme="streamlit", use_container_width=True)
+    
     #st.write(pie_fig)
 
 
 st.markdown("""---""")
-
-a_column, b_column, c_column = st.columns(3)
-with a_column:
-    st.video('https://www.youtube.com/watch?v=qwbLITj5fMo')
-with b_column:
-    st.video('https://www.youtube.com/watch?v=JHx57St8yDk')
-with c_column:
-    st.video('https://www.youtube.com/watch?v=H-W1eaZ0GGw')
+with st.expander("Video"):
+    a_column, b_column, c_column = st.columns(3)
+    with a_column:
+        st.video('https://www.youtube.com/watch?v=qwbLITj5fMo')
+    with b_column:
+        st.video('https://www.youtube.com/watch?v=JHx57St8yDk')
+    with c_column:
+        st.video('https://www.youtube.com/watch?v=H-W1eaZ0GGw')
 
 
 st.markdown("""---""")
 
 
-st.dataframe(df)
+with st.expander("Dataframe"):
+    st.dataframe(df)
 
 

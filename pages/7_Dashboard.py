@@ -57,8 +57,11 @@ with empty1:
 with content1:
     st.subheader("Pattaya_H3_Map", anchor=None)
     floodlist =df.FloodRisk.unique().tolist()
-    choices = st.multiselect(" ",floodlist)
+    list_default=["เสี่ยงภัยมาก","เสี่ยงภัยปานกลาง","เสี่ยงภัยน้อย"]
+    choices = st.multiselect(" ",floodlist,default=list_default)
     #st.write(df[df.FloodRisk.isin(choices)])
+
+
     df=df[df.FloodRisk.isin(choices)]
     import streamlit as st
     import leafmap.kepler as leafmap

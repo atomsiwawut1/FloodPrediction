@@ -131,7 +131,7 @@
         "isSplit": false
       },
       "mapStyle": {
-        "styleType": "Light",
+        "styleType": "light",
         "topLayerGroups": {},
         "visibleLayerGroups": {},
         "threeDBuildingColor": [

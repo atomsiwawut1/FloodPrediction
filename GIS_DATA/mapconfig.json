@@ -90,26 +90,6 @@
                   "format": null
                 },
                 {
-                  "name": "LU_LV1",
-                  "format": null
-                },
-                {
-                  "name": "DEM_Elev_2m",
-                  "format": null
-                },
-                {
-                  "name": "DEM_SlopePer_2m",
-                  "format": null
-                },
-                {
-                  "name": "FAR",
-                  "format": null
-                },
-                {
-                  "name": "BCR",
-                  "format": null
-                },
-                {
                   "name": "FloodRisk",
                   "format": null
                 },
@@ -151,7 +131,7 @@
         "isSplit": false
       },
       "mapStyle": {
-        "styleType": "satellite",
+        "styleType": "Light",
         "topLayerGroups": {},
         "visibleLayerGroups": {},
         "threeDBuildingColor": [
